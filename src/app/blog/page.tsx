@@ -17,6 +17,8 @@ async function getData() {
 
 const Blog = async () => {
   const data: Array<any> = await getData();
+  console.log('logggg', data);
+
   return (
     <div className={styles.mainContainer}>
       {data.map((item) => (

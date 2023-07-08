@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/context/ThemeContext.tsx", "src/components/DarkModeToggle/DarkModeToggle.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/context/ThemeContext.tsx", "src/components/DarkModeToggle/DarkModeToggle.tsx", "src/app/api/posts/route.js"],
   "exclude": ["node_modules"]
 }
