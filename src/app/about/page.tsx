@@ -8,7 +8,7 @@ const About = () => {
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         <Image
-          src='https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg'
+          src='https://images.unsplash.com/photo-1688736009784-9d3cb2b3dedd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80'
           fill={true}
           alt=''
           className={styles.img}

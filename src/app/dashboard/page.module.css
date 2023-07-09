@@ -10,14 +10,14 @@
 .post {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 50px 0px;
+  gap: 20px;
 }
 
 .imgContainer {
   width: 200px;
   height: 100px;
-  position: Ū;
+  position: 0;
 }
 
 .img {
@@ -27,6 +27,7 @@
 .delete {
   cursor: pointer;
   color: red;
+  margin-left: auto;
 }
 
 .new {
