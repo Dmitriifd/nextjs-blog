@@ -1,11 +1,12 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { FormEventHandler, useEffect, useState } from 'react';
 import styles from './page.module.css';
 import { getProviders, signIn, useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
-const Login = ({ url }) => {
+const Login = () => {
+
   const session = useSession();
   const router = useRouter();
   const params = useSearchParams();
@@ -13,8 +14,8 @@ const Login = ({ url }) => {
   const [success, setSuccess] = useState('');
 
   useEffect(() => {
-    setError(params.get('error'));
-    setSuccess(params.get('success'));
+    setError(params.get('error')!);
+    setSuccess(params.get('success')!);
   }, [params]);
 
   if (session.status === 'loading') {
@@ -25,8 +26,9 @@ const Login = ({ url }) => {
     router?.push('/dashboard');
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e: any) => {
     e.preventDefault();
+
     const email = e.target[0].value;
     const password = e.target[1].value;
 

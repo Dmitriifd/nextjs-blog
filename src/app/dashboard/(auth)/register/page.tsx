@@ -6,10 +6,9 @@ import { useRouter } from 'next/navigation';
 
 const Register = () => {
   const [error, setError] = useState(null);
-
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const name = e.target[0].value;
     const email = e.target[1].value;
@@ -31,7 +30,6 @@ const Register = () => {
         router.push('/dashboard/login?success=Account has been created');
     } catch (err) {
       setError(err);
-      console.log(err);
     }
   };
 
